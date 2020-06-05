@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/screenMain">
+
+    <fragment
+        android:id="@+id/screenMain"
+        android:name="com.example.planner.ScreenMain"
+        android:label="ScreenMain"
+        tools:layout="@layout/fragment_screen_main">
+        <action
+            android:id="@+id/action_screenMain_to_addReminder"
+            app:destination="@id/addReminder" />
+        <argument
+            android:name="reminderAdded"
+            app:argType="string" />
+        <argument
+            android:name="deadlineAdded"
+            app:argType="string" />
+        <argument
+            android:name="priorityAdded"
+            app:argType="integer" />
+        <argument
+            android:name="prFlagAdded"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_screenMain_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addReminder"
+        android:name="com.example.planner.AddReminder"
+        android:label="AddReminder"
+        tools:layout="@layout/fragment_add_reminder">
+        <action
+            android:id="@+id/action_addReminder_to_screenMain"
+            app:destination="@id/screenMain" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.planner.AboutFragment"
+        android:label="AboutFragment"
+        tools:layout="@layout/fragment_about"/>
+</navigation>

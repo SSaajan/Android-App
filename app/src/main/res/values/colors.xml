@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#E7E7E7</color>
+    <color name="colorAccent">#6f85d4</color>
+    <color name="background1">#eaebfe</color>
+    <color name="lessWhite">#e9e5da</color>
+    <color name="text1">#505a74</color>
+    <color name="hint1">#636f8f</color>
+    <color name="calender1">#354c7c</color>
+    <color name="calender2">#022954</color>
+    <color name="actionBarText">#000000</color>
+    <color name="text2">#FFFFFF</color>
+</resources>

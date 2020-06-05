@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/addScreenLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/update_bg">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#66FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/clearButton"
+                android:layout_width="86dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/custombtton"
+                android:fontFamily="@font/roboto_medium"
+                android:shadowColor="@color/background1"
+                android:text="@string/clear"
+                android:textAllCaps="false"
+                android:textColor="@color/text1"
+                android:textColorHighlight="@color/background1"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="86dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/custombtton"
+                android:fontFamily="@font/roboto_medium"
+                android:shadowColor="@color/background1"
+                android:text="@string/save"
+                android:textAllCaps="false"
+                android:textColor="@color/text1"
+                android:textColorHighlight="@color/background1"
+                android:textColorHint="@color/background1"
+                android:textColorLink="@color/background1"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/inner"
+                android:layout_width="346dp"
+                android:layout_height="514dp"
+                android:background="@drawable/add1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.552">
+
+                <EditText
+                    android:id="@+id/reminderText"
+                    android:layout_width="324dp"
+                    android:layout_height="58dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:ems="10"
+                    android:fontFamily="@font/roboto_medium"
+                    android:hint="Reminder"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center"
+                    android:textColor="@color/text1"
+                    android:textColorHighlight="@color/hint1"
+                    android:textColorHint="@color/hint1"
+                    android:textColorLink="@color/hint1"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/DeadlineText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:ems="10"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Click to select"
+                    android:textColor="@color/text1"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toEndOf="@+id/dl"
+                    app:layout_constraintTop_toBottomOf="@+id/reminderText" />
+
+                <Switch
+                    android:id="@+id/prioritySwitch"
+                    android:layout_width="103dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Custom Priority"
+                    android:textColor="@color/text1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/calendarView" />
+
+                <EditText
+                    android:id="@+id/priorityText"
+                    android:layout_width="107dp"
+                    android:layout_height="66dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="60dp"
+                    android:ems="10"
+                    android:fontFamily="@font/roboto_medium"
+                    android:hint="Priority"
+                    android:inputType="textPersonName"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/text1"
+                    android:textColorHint="@color/text1"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/prioritySwitch"
+                    app:layout_constraintTop_toBottomOf="@+id/calendarView" />
+
+                <CalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="341dp"
+                    android:layout_height="314dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:dateTextAppearance="@style/CalenderViewDateCustomText"
+                    android:theme="@style/CalenderViewCustom"
+                    android:weekDayTextAppearance="@style/CalenderViewWeekCustomText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/DeadlineText" />
+
+                <TextView
+                    android:id="@+id/dl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="@string/deadline"
+                    android:textColor="@color/text1"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/reminderText" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
